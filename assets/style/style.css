@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Morganite";
+    src: url("../font/Morganite/Morganite-Light.ttf");
+}
+
+@font-face {
+    font-family: "Morganite";
+    src: url("../font/Morganite/Morganite-Regular.ttf");
+    font-weight: 400;
+}
+
+body {
+    background-color: #F2F2F0;
+}
+
+.name-header {
+    font-family: "Morganite", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 5%;
+}
+
+.icon-social-network {
+    width: 64px;
+}
+
+.avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.presentation {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.title-hero {
+    font-family: "Morganite", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.hook-sentence {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.cta-hero {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 0.7em;
+    border-radius: 50px;
+    border-color: #0000008c;
+    outline: none;
+}
