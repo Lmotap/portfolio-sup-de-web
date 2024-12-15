@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.presentation {
+    position: absolute;
+    background-color: white;
+    padding: 0 1.5rem;
+    border-radius: 50px;
+    transform: translate(70%, -20%) rotate(-7deg); 
+    transform-origin: left center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.cta-hero {
+    padding: 0.5rem 0.5rem;
+}
+
+.container-button {
+    margin-top: 1rem;
+}
