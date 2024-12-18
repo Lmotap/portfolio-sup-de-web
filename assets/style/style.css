@@ -1,0 +1,267 @@
+/* Custom properties */
+:root {
+    --font-primary: "Morganite", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --color-bg: #F2F2F0;
+    --color-text: #000;
+    --border-radius-lg: 2rem;
+    --border-radius-pill: 50px;
+    --transition-default: all 0.3s ease;
+
+        --base-font-size: 16px;
+    
+        --font-primary: "Morganite", sans-serif;
+        --font-secondary: "Inter", sans-serif;
+        
+        --color-bg: #F2F2F0;
+        --color-text: #000;
+        
+        --border-radius-lg: 2rem;
+        --border-radius-pill: 50px;
+        --transition-default: all 0.3s ease;
+        
+        --font-size-small: 0.875rem;
+        --font-size-medium: 1rem;
+        --font-size-large: 1.5rem;
+        --font-size-xlarge: 2rem;
+
+        /* Base mobile-first font sizes (< 768px) */
+        --title-size: 2rem;
+        --body-size: 1rem;
+        --small-size: 0.875rem;
+  }
+  
+  /* Font faces */
+  @font-face {
+    font-family: "Morganite";
+    src: url("../font/Morganite/Morganite-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "Morganite";
+    src: url("../font/Morganite/Morganite-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  /* Base styles */
+  body {
+    background-color: var(--color-bg);
+  }
+
+  nav a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+nav svg {
+    vertical-align: middle;
+}
+  
+  /* Typography */
+  .title-about, .title-hero, .name-header, 
+  .title-project, .card-title, .title-contact, .title-section-project, .title-stack {
+    font-family: var(--font-primary);
+    font-size: var(--title-size);
+    font-weight: 400;
+  }
+  
+  .about-paragraph, .paragraph-project, 
+  .second-paragraph-project, .hook-sentence,
+  .presentation, .project-about, label, 
+  .copyright, .legal-right,
+  .container-arrow-return .return-link span, .cta-hero {
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: var(--body-size);
+  }
+  
+  /* Header */
+  .name-header {
+    letter-spacing: 5%;
+  }
+  
+  /* Social icons */
+  .icon-social-network {
+    margin: 0 0.625rem;
+    opacity: 0.8;
+    transition: var(--transition-default);
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+  }
+  
+  .icon-social-network:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+  
+  /* Avatar */
+  .avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Presentation */
+  .presentation {
+    font-style: italic;
+    background-color: white;
+    border-radius: var(--border-radius-pill);
+    transform: translate(70%, -20%) rotate(-7deg);
+    transform-origin: left center;
+  }
+  
+  /* Buttons */
+  .cta-hero, .button-contact {
+    font-size: 0.7em;
+    border-radius: var(--border-radius-pill);
+    border-color: #0000008c;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .cta-hero {
+    min-width: 180px;
+  }
+  
+  .cta-hero::after {
+    content: "↓";
+    font-size: 1.2em;
+    transition: var(--transition-default);
+  }
+  
+  .cta-hero:hover::after {
+    animation: bounceArrow 1s ease infinite;
+  }
+  
+  /* Projects */
+  .card-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .img-project {
+    width: 100%;
+    max-width: 20rem;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+  }
+  
+  .img-project:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Form elements */
+  input[type=text], input[type=email] {
+    border: none;
+    border-bottom: 1px solid var(--color-text);
+    outline: none;
+    background: transparent;
+  }
+  
+  .input-contact[name="message"] {
+    width: 20rem;
+    height: 10rem;
+    border: 1px solid var(--color-text);
+    outline: none;
+    background: transparent;
+    resize: vertical;
+    font-family: inherit;
+  }
+  
+  /* Links */
+  a:-webkit-any-link {
+    color: var(--color-text);
+  }
+  
+  .return-link {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  
+  /* Width constraints */
+  .about-paragraph {
+    max-width: 90%;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .img-test {
+    max-width: 80%;
+  }
+  
+  .second-paragraph-project, 
+  .paragraph-project {
+    max-width: 85%;
+  }
+  
+  .hook-sentence {
+    width: 100%;
+  }
+  
+  /* Animations */
+  @keyframes bounceArrow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+  }
+
+  /* Tablet (768px) */
+  @media screen and (min-width: 768px) {
+    :root {
+      --title-size: calc(2rem + 1vw);
+      --body-size: calc(1rem + 0.2vw);
+    }
+
+    .img-project {
+        max-width: 25rem;
+    }
+    
+    .avatar {
+        width: 12rem;
+        height: 12rem;
+    }
+  }
+  
+  /* Desktop (1024px) */
+  @media screen and (min-width: 1024px) {
+    :root {
+      --title-size: calc(2.5rem + 1.5vw);
+      --body-size: calc(1.1rem + 0.3vw);
+    }
+
+    .img-project {
+        max-width: 30rem;
+    }
+    
+    .avatar {
+        width: 14rem;
+        height: 14rem;
+    }
+  }
+  
+  /* Large Desktop (1440px) */
+  @media screen and (min-width: 1440px) {
+    :root {
+      --title-size: calc(3rem + 2vw);
+      --body-size: calc(1.2rem + 0.4vw);
+    }
+
+    .img-project {
+        max-width: 35rem;
+    }
+    
+    .avatar {
+        width: 16rem;
+        height: 16rem;
+    }
+  }
+

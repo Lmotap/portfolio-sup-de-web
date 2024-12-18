@@ -1,0 +1,215 @@
+/* Header & Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.container-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation {
+  position: absolute;
+  padding: 0 1.5rem;
+}
+
+.hook-sentence {
+  text-indent: 1rem;
+}
+
+/* CTA Button */
+.container-button {
+  margin-top: 1rem;
+}
+
+.cta-hero {
+  padding: 0.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.cta-hero::after {
+  position: relative;
+  display: inline-block;
+}
+
+/* Main Sections */
+.about {
+  margin-top: 4rem;
+  margin-left: 2.5rem;
+}
+
+.project, 
+.contact {
+  margin-top: 4rem;
+}
+
+/* Project Grid */
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+ 
+.container-links, 
+.container-arrow-return, 
+.paragraph-project, 
+.second-paragraph-project, .title-project, .title-stack {
+  margin-left: 2.5rem;
+}
+
+/* Contact Form */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.button-contact {
+  margin-top: 0.5rem;
+  padding: 0.2rem 4rem;
+  align-self: flex-end;
+}
+
+/* Project Details Page */
+.container-arrow-return {
+  margin: 2rem;
+}
+
+.return-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.container-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.second-paragraph-project, 
+.paragraph-project {
+  text-align: left;
+}
+
+.paragraph-project {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.img-test {
+    margin-left: 2.5rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 2.5rem;
+  }
+  
+  .project-header {
+    width: 100%;
+    display: flex;
+  }
+  
+  .card-project {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .container-techno {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .img-stack {
+    width: 3rem;
+  }
+
+
+
+/* Footer */
+footer {
+  margin: 5rem 2.5rem 2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  
+    /* Footer Layout */
+    footer {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 2.5rem;
+        margin: 5rem 0 0 0;
+      }
+    
+      .copyright {
+        position: absolute;
+        left: 50%;
+        top: 50%; 
+        transform: translate(-50%, -50%);
+      }
+    
+      .legal-right {
+        margin-left: auto;
+      }
+
+      .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    
+      .project-header {
+        grid-column: 1 / -1;
+      }
+    
+      .card-project:nth-child(odd) {
+        justify-self: end;
+      }
+    
+      .card-project:nth-child(even) {
+        justify-self: start;
+      }
+      
+
+    }
