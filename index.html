@@ -39,15 +39,21 @@
         <link rel="preload" as="image" href="./assets/img/logo/rise-up-logo.webp">
         <link rel="preload" as="image" href="./assets/img/logo/sup-de-web-logo.webp">
 
+        <link rel="preload" 
+              as="image" 
+              href="./assets/img/avatar.webp"
+              fetchpriority="high">
+        
         <style>
             .avatar {
                 width: 400px;
                 height: 400px;
                 object-fit: cover;
+                content-visibility: auto;
+                contain: layout paint;
             }
         </style>
         
-        <!-- Chargement différé des styles non-critiques -->
         <link rel="preload" as="style" href="./assets/style/style.css">
         <link rel="preload" as="style" href="./assets/style/layout.css">
         <link rel="preload" as="style" href="./assets/style/reset.css">
@@ -88,7 +94,9 @@
                      class="avatar"
                      width="400" 
                      height="400"
-                     loading="eager">
+                     fetchpriority="high"
+                     decoding="async"
+                     importance="high">
                 <div class="presentation">Lucas Mota <span class="wave">👋</span></div>
             </div>
             
