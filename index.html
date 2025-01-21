@@ -39,25 +39,36 @@
         <link rel="preload" as="image" href="./assets/img/logo/rise-up-logo.webp">
         <link rel="preload" as="image" href="./assets/img/logo/sup-de-web-logo.webp">
 
+        <!-- Priorité maximale pour l'image LCP -->
         <link rel="preload" 
               as="image" 
               href="./assets/img/avatar.webp"
-              fetchpriority="high">
+              fetchpriority="high"
+              type="image/webp">
         
+        <!-- Inline des styles critiques -->
         <style>
             .avatar {
                 width: 400px;
                 height: 400px;
                 object-fit: cover;
                 content-visibility: auto;
-                contain: layout paint;
+                contain: layout paint style;
+                display: block;
+            }
+            
+            .container-avatar {
+                content-visibility: auto;
+                contain-intrinsic-size: 400px;
             }
         </style>
         
+        <!-- Préchargement des autres ressources critiques -->
         <link rel="preload" as="style" href="./assets/style/style.css">
         <link rel="preload" as="style" href="./assets/style/layout.css">
         <link rel="preload" as="style" href="./assets/style/reset.css">
         
+        <!-- Chargement différé des styles non-critiques -->
         <link rel="stylesheet" href="./assets/style/style.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="./assets/style/layout.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="./assets/style/reset.css" media="print" onload="this.media='all'">
@@ -95,7 +106,8 @@
                      width="400" 
                      height="400"
                      fetchpriority="high"
-                     decoding="async"
+                     decoding="sync"
+                     loading="eager"
                      importance="high">
                 <div class="presentation">Lucas Mota <span class="wave">👋</span></div>
             </div>
