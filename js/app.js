@@ -91,7 +91,7 @@ function createExperienceTimeline() {
                         <div class="timeline-content">
                             <div class="timeline-header">
                                 <h3 class="timeline-title">${exp.title}</h3>
-                                ${exp.logo ? `<img src="${exp.logo}" alt="${exp.alt}" class="company-logo">` : ''}
+                                ${exp.logo ? `<img src="${exp.logo}" alt="${exp.alt}" class="company-logo" loading="lazy">` : ''}
                             </div>
                             <p class="timeline-description">${exp.description}</p>
                             <div class="timeline-tech">

@@ -130,6 +130,7 @@ cursor: pointer;
 
 .img-stack {
   width: 3rem;
+  object-fit: cover;
   }
 
 .cta-hero {
@@ -210,6 +211,7 @@ border-radius: 10px;
 background: rgba(255, 255, 255, 0.03);
 overflow: hidden;
 transition: all 0.3s ease;
+object-fit: cover;
 }
 
 .hook-sentence {
@@ -444,6 +446,7 @@ transform-origin: 70% 70%;
     overflow: hidden;
     transition: all 0.3s ease;
     margin-bottom: 1.5rem;
+    object-fit: cover;
 }
 
 .link-project {
