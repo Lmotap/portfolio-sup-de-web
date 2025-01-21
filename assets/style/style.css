@@ -74,8 +74,8 @@ transform: translateY(-3px);
 }
 
 .avatar {
-width: 8rem;
-height: 8rem;
+width: 160px;
+height: 160px;
 border-radius: 50%;
 object-fit: cover;
 border: 1px solid rgba(255, 255, 255, 0.1);
