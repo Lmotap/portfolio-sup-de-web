@@ -52,9 +52,8 @@ letter-spacing: 5%;
 }
 
 .hook-sentence a:hover {
-text-decoration: underline;
 color: #ea6852;
-transition: all 0.3s ease-in-out;
+transition: all 0.4s ease-in-out;
 }
 
 .icon-social-network {

@@ -43,7 +43,7 @@ const experiences = [
         period: "2024 — Présent",
         title: "Ecole de Développeur Web @ Sup de Web",
         company: "Sup de Web",
-        logo: "./assets/img/logo/sup-de-web-logo.png",
+        logo: "./assets/img/logo/sup-de-web-logo.webp",
         alt: "Logo de Sup de Web",
         description: "En tant qu'étudiant en Bachelor 2 en développement web full-stack, j'ai mené divers projets pratiques et collaboré sur des études de cas approfondies. J'ai exploré différents frameworks comme React, Vue.js et Symfony, tout en renforçant mes compétences en DevOps avec Docker, Ansible et Azure. Une attention particulière a été portée à la sécurité informatique, notamment à travers l'intégration de bonnes pratiques et la mise en place d'environnements optimisés.",
         technologies: ["Symfony", "SQL", "React", "Vue.js", "Node.js"],
@@ -52,10 +52,11 @@ const experiences = [
 ];
 
 function createProject(project) {
+    // Création de la structure HTML pour un projet
     return `
         <div class="project" style="visibility: hidden">
             <figure>
-                <img src="${project.image}" alt="${project.alt} thumbnail">
+                <img src="${project.image}" " alt="${project.alt}">
             </figure>
             <div class="project-info">
                 <a href="${project.link}" class="custom-cursor">
@@ -103,14 +104,17 @@ function createExperienceTimeline() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialisation des sections et animations à la fin du chargement du document
     const projectsSection = document.querySelector('.projects');
     projectsSection.innerHTML += projects.map(project => createProject(project)).join('');
     
+    // Configuration initiale des animations GSAP pour les sections about et contact
     gsap.set('.about, .contact', { 
         opacity: 0,
         y: 100 
     });
 
+    // Configuration initiale des animations GSAP pour les projets
     gsap.set('.project', {
         opacity: 0,
         y: 50,
@@ -179,12 +183,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.querySelector('.cta-hero').addEventListener('click', function(e) {
+    // Gestion de l'interaction avec le bouton CTA Hero
     e.preventDefault();
     
+    // Animation de réduction lors du clic
     gsap.to(this, {
         scale: 0.95,
         duration: 0.1,
         onComplete: () => {
+            // Retour à l'échelle normale après le clic
             gsap.to(this, {
                 scale: 1,
                 duration: 0.1
@@ -192,6 +199,7 @@ document.querySelector('.cta-hero').addEventListener('click', function(e) {
         }
     });
 
+    // Animation de défilement vers la section about
     gsap.to(window, {
         duration: 1.2,
         scrollTo: {
@@ -200,6 +208,7 @@ document.querySelector('.cta-hero').addEventListener('click', function(e) {
         },
         ease: 'power4.inOut',
         onStart: () => {
+            // Animation d'apparition de la section about lors du défilement
             gsap.to('.about', {
                 opacity: 1,
                 y: 0,
@@ -212,5 +221,6 @@ document.querySelector('.cta-hero').addEventListener('click', function(e) {
 });
 
 window.addEventListener('resize', () => {
+    // Rafraîchissement des triggers ScrollTrigger lors du redimensionnement de la fenêtre
     ScrollTrigger.refresh();
 });
