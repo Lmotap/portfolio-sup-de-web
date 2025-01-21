@@ -205,15 +205,6 @@ color: var(--color-white);
     gap: 0.5rem;
 }
 
-.img-test {
-max-width: 80%;
-border-radius: 10px;
-background: rgba(255, 255, 255, 0.03);
-overflow: hidden;
-transition: all 0.3s ease;
-object-fit: cover;
-}
-
 .hook-sentence {
 width: 100%;
 }
@@ -330,6 +321,90 @@ transform: scale(0.8);
 opacity: 0;
 transition: all 0.3s ease;
 }
+
+/* Styles spécifiques pour les mentions légales */
+.legal-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content h2:first-of-type {
+    margin-top: 2rem;
+}
+
+.legal-content p {
+    margin-bottom: 1.5rem;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-logo {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.title-project {
+    font-size: calc(1.5rem + 1vw); 
+    margin-bottom: 2rem;
+}
+
+.img-project-page {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.link-project {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-project:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.container-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.link-project .arrow-icon {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.link-project:hover .arrow-icon {
+    transform: scale(1) translate(2px, -2px);
+    opacity: 1;
+}
+
+.legal-right, .contact-item, a {
+    text-decoration: none;
+}
+
 /* Animations */
 @keyframes wave {
 0% { transform: rotate(0deg); }
@@ -404,89 +479,4 @@ transform-origin: 70% 70%;
         height: 16rem;
     }
 }
-
-/* Styles spécifiques pour les mentions légales */
-.legal-content h2 {
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.legal-content h2:first-of-type {
-    margin-top: 2rem;
-}
-
-.legal-content p {
-    margin-bottom: 1.5rem;
-}
-
-.timeline-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.company-logo {
-    width: 82px;
-    height: 82px;
-    object-fit: contain;
-    border-radius: 4px;
-}
-
-.title-project {
-    font-size: calc(1.5rem + 1vw); 
-    margin-bottom: 2rem;
-}
-
-.img-test {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.03);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
-}
-
-.link-project {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--color-white);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.link-project:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
-.container-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.link-project .arrow-icon {
-    transform: scale(0.8);
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.link-project:hover .arrow-icon {
-    transform: scale(1) translate(2px, -2px);
-    opacity: 1;
-}
-
-.legal-right, .contact-item, a {
-    text-decoration: none;
-}
-
-
 

@@ -21,7 +21,7 @@ const projects = [
     {
         title: "Résarvo",
         type: "Application Web",
-        image: "./assets/img/panier-de-basket.webp",
+        image: "./assets/img/personne-qui-reserve.webp",
         alt: "Mon projet d'application web qui permet à l'utilisateur de réserver des activités dans un parc de loisirs",
         link: "./views/resarvo.html",
         tags: ["PHP", "CSS", "JavaScript"]
