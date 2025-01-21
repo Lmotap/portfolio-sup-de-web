@@ -33,6 +33,8 @@ text-align: center;
 justify-content: center;
 gap: 2rem;
 margin-bottom: 5rem;
+min-height: 2OOpx;
+contain: layout style paint;
 }
 
 .container-avatar {
