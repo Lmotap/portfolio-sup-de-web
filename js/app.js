@@ -5,7 +5,7 @@ const projects = [
     {
         title: "Sparkle",
         type: "Application Web",
-        image: "./assets/img/appareil-photo-avec-des-pelicules.webp",
+        image: "./assets/img/appareil-photo-en-noir.webp",
         alt: "Mon projet d'application web qui permet d'être mon blog et portfolio de Photographie",
         link: "./views/sparkle.html",
         tags: ["PHP", "CSS", "JavaScript"]
@@ -21,7 +21,7 @@ const projects = [
     {
         title: "Résarvo",
         type: "Application Web",
-        image: "./assets/img/personne-qui-reserve.webp",
+        image: "./assets/img/panier-de-basket.webp",
         alt: "Mon projet d'application web qui permet à l'utilisateur de réserver des activités dans un parc de loisirs",
         link: "./views/resarvo.html",
         tags: ["PHP", "CSS", "JavaScript"]
