@@ -56,7 +56,11 @@ function createProject(project) {
     return `
         <div class="project" style="visibility: hidden">
             <figure>
-                <img src="${project.image}" " alt="${project.alt}">
+                <img src="${project.image}" 
+                     alt="${project.alt}"
+                     width="800"
+                     height="600"
+                     loading="lazy">
             </figure>
             <div class="project-info">
                 <a href="${project.link}" class="custom-cursor">
