@@ -45,33 +45,17 @@
               href="./assets/img/avatar.webp"
               fetchpriority="high"
               type="image/webp">
-        
-        <!-- Inline des styles critiques -->
-        <style>
-            .avatar {
-                width: 400px;
-                height: 400px;
-                object-fit: cover;
-                content-visibility: auto;
-                contain: layout paint style;
-                display: block;
-            }
-            
-            .container-avatar {
-                content-visibility: auto;
-                contain-intrinsic-size: 400px;
-            }
-        </style>
-        
-        <!-- Préchargement des autres ressources critiques -->
-        <link rel="preload" as="style" href="./assets/style/style.css">
-        <link rel="preload" as="style" href="./assets/style/layout.css">
-        <link rel="preload" as="style" href="./assets/style/reset.css">
-        
-        <!-- Chargement différé des styles non-critiques -->
-        <link rel="stylesheet" href="./assets/style/style.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="./assets/style/layout.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="./assets/style/reset.css" media="print" onload="this.media='all'">
+
+              <style>
+                .hero {
+                    min-height: 300px;
+                    contain: layout style paint;
+                }
+                .title-hero, .hook-sentence {
+                    contain: layout style;
+                }
+            </style>
+
 
     </head>
     <body>
@@ -101,14 +85,12 @@
         <main>
             <div class="container-avatar">
                 <img src="./assets/img/avatar.webp" 
-                     alt="Une photo me représentant" 
-                     class="avatar"
-                     width="400" 
-                     height="400"
-                     fetchpriority="high"
-                     decoding="sync"
-                     loading="eager"
-                     importance="high">
+                alt="Une photo me représentant" 
+                class="avatar"
+                width="400" 
+                height="400"
+                fetchpriority="high"
+                loading="eager">
                 <div class="presentation">Lucas Mota <span class="wave">👋</span></div>
             </div>
             
