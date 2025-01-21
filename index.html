@@ -20,6 +20,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+        <link rel="preload" as="image" href="./assets/img/avatar.webp">
+        <link rel="preload" as="image" href="./assets/img/appareil-photo-avec-des-pelicules.webp">
+        <link rel="preload" as="image" href="./assets/img/chaises-de-cinema.webp">
+        <link rel="preload" as="image" href="./assets/img/personne-qui-reserve.webp">
+        
+        <!-- Preload logos -->
+        <link rel="preload" as="image" href="./assets/img/logo/rise-up-logo.webp">
+        <link rel="preload" as="image" href="./assets/img/logo/sup-de-web-logo.webp">
+
     </head>
     <body>
         
@@ -47,7 +56,12 @@
 
         <main>
             <div class="container-avatar">
-                <img src="./assets/img/avatar.webp" alt="Une photo me représentant" class="avatar">
+                <img src="./assets/img/avatar.webp" 
+                     alt="Une photo me représentant" 
+                     class="avatar"
+                     width="400" 
+                     height="400"
+                     loading="eager">
                 <div class="presentation">Lucas Mota <span class="wave">👋</span></div>
             </div>
             
@@ -66,10 +80,10 @@
             <section class="about">
                 <h2 class="title-about">A propos</h2>
                 <p class="about-paragraph">
-                    J’ai commencé mon parcours en tant qu’apprenti développeur full-stack avec une passion marquée pour le développement web, en particulier le front-end. Mon ambition est de me spécialiser dans le front-end ou d’évoluer vers un poste de VP dans le domaine tech.
+                    J'ai commencé mon parcours en tant qu'apprenti développeur full-stack avec une passion marquée pour le développement web, en particulier le front-end. Mon ambition est de me spécialiser dans le front-end ou d'évoluer vers un poste de VP dans le domaine tech.
                     <br>
                     <br>
-                    Au fil de mon apprentissage, j’explore sans cesse de nouvelles technologies et repousse mes limites pour concevoir des expériences numériques toujours plus fluides et performantes. En dehors du code, la photographie occupe une place importante dans ma vie : elle affine mon regard esthétique et mon sens du détail, des qualités que j’intègre pleinement dans mes projets web. Mon objectif est de créer des interfaces aussi captivantes qu’efficaces.                </p>
+                    Au fil de mon apprentissage, j'explore sans cesse de nouvelles technologies et repousse mes limites pour concevoir des expériences numériques toujours plus fluides et performantes. En dehors du code, la photographie occupe une place importante dans ma vie : elle affine mon regard esthétique et mon sens du détail, des qualités que j'intègre pleinement dans mes projets web. Mon objectif est de créer des interfaces aussi captivantes qu'efficaces.                </p>
             </section>
 
             <section class="projects">
